@@ -1,10 +1,26 @@
+## Mispitools: Missing Person Identification Tools
+
+<!-- badges: start -->
+
+[![CRAN status](https://www.r-pkg.org/badges/version/mispitools)](https://CRAN.R-project.org/package=mispitools)
+[![](https://cranlogs.r-pkg.org/badges/grand-total/mispitools?color=blue)](https://cran.r-project.org/package=mispitools)
+
+<!-- badges: end -->
+
+
 ## Installation
 
 The goal of mispitools is to bring a simulation framework for decision
-making in missing person identification cases. You can install the
-released version of mispitools from [Github](https://github.com/MarsicoFL/mispitools/)
-with:
+making in missing person identification cases. You can install it from CRAN typing on your R command line the line presented below:
 
+``` r
+install.packages("mispitools")
+library(mispitools)
+```
+
+You can install too the
+versions under development (unstable) of mispitools from [Github](https://github.com/MarsicoFL/mispitools/)
+with:
 ``` r
 install.packages("devtools")
 library(devtools)
@@ -62,7 +78,6 @@ DTsim(datasim, 10)
 
     ## [1] "Decision threshold is: 6"
 
-Please cite this tool as: Marsico, F. L., Vigeland, M. D., Egeland, T.,
-& Piñero, M. H. (2021). Making decisions in missing person
+Please cite this tool as: Marsico, F. L. et al(2021). Making decisions in missing person
 identification cases with low statistical power. Forensic science
 international: genetics, 102519.
