@@ -78,6 +78,37 @@ DTsim(datasim, 10)
 
     ## [1] "Decision threshold is: 6"
 
+It is possible work with preliminary investigation data. We use as example the case of the Abuelas de Plaza de Mayo. It consist in the search of abducted children during the last dictatorship in Argentina. Some function are presented below:
+
+``` r
+makePrelim()
+
+Output:
+    POI-ID        DBD Gender       Birth-type       Birth place
+1        1 1977-08-25 female   hospital birth      Buenos Aires
+2        2 1979-05-09 female   hospital birth      Buenos Aires
+3        3 1976-10-10   male   hospital birth North west region
+4        4 1978-04-09 female       home birth           Litoral
+5        5 1979-12-11   male   hospital birth              Cuyo
+6        6 1978-08-04 female   hospital birth      Buenos Aires
+7        7 1977-01-31 female   hospital birth      Buenos Aires
+8        8 1976-09-30   male   hospital birth      Buenos Aires
+9        9 1979-05-22   male   hospital birth      Buenos Aires
+10      10 1978-06-29   male       home birth         Patagonia
+...
+```
+
+It generates a database of preliminary investigation data. Some features such as gender, declared birth date (DBD), region and type of birth are simulated for a set of persons of interest. Different scenarios of searches could be selected. For instance:
+
+``` r
+LRprelim()
+
+
+```
+Could be used to compute a likelihood ratio based on birth dates of the missing person (actual birth date or ABD) and for the person of interest (DBD). Methods for LR computations are described here.
+
+
+
 Please cite this tool as: Marsico, F. L. et al(2021). Making decisions in missing person
 identification cases with low statistical power. Forensic science
 international: genetics, 102519.

@@ -12,7 +12,8 @@
 #'
 #' @return An object of class data.frame with preliminary investigation data.
 #' @export
-#'
+#' @importFrom stats rgamma
+#' @importFrom stats runif
 #' @examples
 #' makePrelim(
 #'   dateinit = "1975/01/01",
@@ -41,17 +42,17 @@ set.seed(seed)
 a <- seq(1, numsims, by = 1)
 
 if(scenario == 1) {
-  b <- as.data.frame(as.Date('1975/01/01') + ext*rgamma(numsims, 12))
+  b <- as.data.frame(as.Date(dateinit) + ext*rgamma(numsims, 12))
 }
 
 else if (scenario == 2) {
-  b <- as.data.frame(as.Date('1975/01/01') + runif(numsims, min = 0, max = ext))
+  b <- as.data.frame(as.Date(dateinit) + runif(numsims, min = 0, max = ext))
 }
 
   c <- sample(gender, numsims, replace = TRUE, prob = c(femaleprop, maleprop))
   d <- sample(birth, numsims, replace = TRUE, prob = birthprob)
   e <- sample(region, numsims, replace = TRUE, prob = regionprob)
-
+  
 PrelimDatasim <- cbind(a, b, c, d, e)
 base::colnames(PrelimDatasim) <- c("POI-ID", "DBD", "Gender", "Birth-type", "Birth place")
 base::structure(base::as.data.frame(PrelimDatasim))
