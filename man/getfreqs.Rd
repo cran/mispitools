@@ -3,14 +3,17 @@
 \name{getfreqs}
 \alias{getfreqs}
 \title{Function for getting STR allele frequencies from different world populations.}
+\source{
+https://doi.org/10.1016/j.fsigss.2009.08.178; https://doi.org/10.1016/j.fsigen.2016.06.008; https://doi.org/10.1016/j.fsigen.2018.07.013.
+}
 \usage{
 getfreqs(region)
 }
 \arguments{
-\item{region}{select the place of the allele frequency database. Possible values are listed: "Argentina", "Asia", "Europe", "USA", "Austria", "BosniaHerz", "China" and "Japan". Sources: https://doi.org/10.1016/j.fsigss.2009.08.178; https://doi.org/10.1016/j.fsigen.2016.06.008; https://doi.org/10.1016/j.fsigen.2018.07.013.}
+\item{region}{select the place of the allele frequency database. Possible values are listed: "Argentina", "Asia", "Europe", "USA", "Austria", "BosniaHerz", "China" and "Japan".}
 }
 \value{
-An allele frequency database.
+An allele frequency database adapted compatible with pedtools format.
 }
 \description{
 Function for getting STR allele frequencies from different world populations.

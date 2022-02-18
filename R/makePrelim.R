@@ -1,4 +1,4 @@
-#' Make POI preliminary investigation data simulations: a function for obtaining a database of preliminary investigation data for a missing child search.
+#' Make preliminary investigation data simulations: a function for obtaining a database of preliminary investigation data for a missing child search.
 #'
 #' @param dateinit Minimun birth date of simulated persons of interest.
 #' @param scenario Birth date distribution scenarios: (1) non-uniform, (2) uniform.
@@ -15,7 +15,7 @@
 #' @importFrom stats rgamma
 #' @importFrom stats runif
 #' @examples
-#' makePOIprelim(
+#' makePrelim(
 #'   dateinit = "1975/01/01",
 #'   scenario = 1,
 #'   femaleprop = 0.5,
@@ -32,7 +32,7 @@
 
 
 
-makePOIprelim = function(dateinit = "1975/01/01", scenario = 1, femaleprop = 0.5, ext = 100, numsims = 10000, seed = 123, birthprob = c(0.09, 0.9, 0.01), region = c("Cuyo", "Patagonia", "Central region", "North west region", "Litoral", "Buenos Aires"), regionprob = c(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)) {
+makePrelim = function(dateinit = "1975/01/01", scenario = 1, femaleprop = 0.5, ext = 100, numsims = 10000, seed = 123, birthprob = c(0.09, 0.9, 0.01), region = c("Cuyo", "Patagonia", "Central region", "North west region", "Litoral", "Buenos Aires"), regionprob = c(0.1, 0.1, 0.1, 0.1, 0.1, 0.5)) {
 
 gender = c("female","male")
 maleprop = 1 - femaleprop
