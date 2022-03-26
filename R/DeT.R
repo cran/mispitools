@@ -1,4 +1,4 @@
-#' Decision Threshold simulation: a function for computing likelihood ratio decision threshold.
+#' Decision Threshold: a function for computing likelihood ratio decision threshold.
 #'
 #' @param datasim Input dataframe containing expected LRs for related and unrelated POIs. It should be the output from makeLRsims function.
 #' @param weight The differential weight between false positives and false negatives. A value of 10 is suggested. 
@@ -10,12 +10,12 @@
 #' x = linearPed(2)
 #' x = setMarkers(x, locusAttributes = NorwegianFrequencies[1:5])
 #' x = profileSim(x, N = 1, ids = 2)[[1]]
-#' datasim = makeLRsims(x, missing = 5, 10, 123)
-#' DTsim(datasim, 10)
+#' datasim = simLRgen(x, missing = 5, 10, 123)
+#' DeT(datasim, 10)
 
 
 
-DTsim = function(datasim, weight) {
+DeT = function(datasim, weight) {
 
 nsims = nrow(datasim)
 TPED = datasim$Related 

@@ -1,4 +1,4 @@
-#' Make likelihoods ratio (LRs) simulations: a function for obtaining expected LRs under relatedness and unrelatedness kinship hypothesis.
+#' Simulate likelihoods ratio (LRs) based on genetic data: a function for obtaining expected LRs under relatedness and unrelatedness kinship hypothesis.
 #'
 #' @param reference Reference pedigree. It could be an input from read_fam() function or a pedigree built with pedtools.
 #' @param missing Missing person ID/label indicated in the pedigree.
@@ -16,12 +16,12 @@
 #' x = setMarkers(x, locusAttributes = NorwegianFrequencies[1:5])
 #' x = profileSim(x, N = 1, ids = 2)[[1]]
 #' plot(x)
-#' datasim = makeLRsims(x, missing = 5, 10, 123)
+#' datasim = simLRgen(x, missing = 5, 10, 123)
 
 
 
 
-makeLRsims = function(reference, missing, numsims, seed) {
+simLRgen = function(reference, missing, numsims, seed) {
   st = base::Sys.time()
 
   if(!pedtools::is.ped(reference))
