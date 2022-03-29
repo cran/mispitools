@@ -1,4 +1,4 @@
-33321806a7af58aacb5de2f58623822a *DESCRIPTION
+912b9cf90a62d7bae0d247b30dc29eaa *DESCRIPTION
 873cf96eedb272737870c7eaeea3987b *NAMESPACE
 a7149878dedff94392c6ae0c24c1df94 *R/Argentina.R
 f98133266520614ded4e93d248926e4c *R/Asia.R
@@ -12,14 +12,14 @@ d52516b58a1a642a96ad653b45b80f66 *R/LRdist.R
 ed5ddf6203bea2d69bcf79c1f51c06f9 *R/LRprelim.R
 ccd9a8c8bba67693cdf9653c2e03ebb0 *R/Trates.R
 0f4abfc2a5ce032102f615e3ae663021 *R/USA.R
-1eb045c4e54d6f4859a8c17b272c45f6 *R/combLR.R
+e7f233cb68c4f450c102ec837e4c675e *R/combLR.R
 2289eb1826bab1b499dd30d369eca0f2 *R/deplot.R
 af8d5c99442ee0542f33fd6582cea801 *R/getfreqs.R
 e68400bf8b646520db6014f8a53c9d97 *R/makeMPprelim.R
 1d4c4c672343d3ea051ff1af2008ca26 *R/makePOIgen.R
-9c1cb42bac5686c88a583451cd3b80bf *R/makePOIprelim.R
+fc72a01e29715b0d3fefab40e3c69317 *R/makePOIprelim.R
 5fcbd53adee1785ec162efd670ccdfe5 *R/simLRgen.R
-41a76e7565f4cafa2c627aa34c1a38dc *R/simLRprelim.R
+6a9cf6f5bd4e90449db5c7032eaf64a3 *R/simLRprelim.R
 97c2a01a8964a777a4a89805d76b9046 *README.md
 39e5afd6b54e4ba1f193914b8b403f0e *data/Argentina.rda
 282eba58f0d9148f990e592893f00e05 *data/Asia.rda
@@ -48,4 +48,4 @@ f616513f1caf7d37ad149833236740fc *man/makeMPprelim.Rd
 ea38a804e7fb69bf2b6ee5f6e78030cd *man/makePOIgen.Rd
 860b4cc71aea91acde869d5ce41fc972 *man/makePOIprelim.Rd
 9296cc67d8fc7891c10b60ff21c96d8f *man/simLRgen.Rd
-6b5862d9d70f9662cc09a6d36fe010bd *man/simLRprelim.Rd
+02f76058cc594814fa71523a337557f9 *man/simLRprelim.Rd
