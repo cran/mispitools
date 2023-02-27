@@ -38,7 +38,7 @@ library(mispitools)
 library(forrel)
 x = linearPed(2)
 x = setMarkers(x, locusAttributes = NorwegianFrequencies[1:5])
-x = profileSim(x, N = 1, ids = 2)[[1]]
+x = profileSim(x, N = 1, ids = 2)
 datasim = makeLRsims(x, missing = 5, 1000, 123)
 ```
 
@@ -73,7 +73,7 @@ Decision threshold could be calculated. For further reading please see
 DOI: 10.1016/j.fsigen.2021.102519
 
 ``` r
-DTsim(datasim, 10)
+DeT(datasim, 10)
 ```
 
     ## [1] "Decision threshold is: 6"
