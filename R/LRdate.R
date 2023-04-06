@@ -1,4 +1,4 @@
-#' Likelihood ratio for preliminary investigation data: a function for computing likelihood ratio based on preliminary investigation data.
+#' Likelihood ratio for birth date in missing person searches
 #'
 #' @param ABD Actual birth date of the missing person.
 #' @param DBD Declared birth date of the person of interest.
@@ -13,14 +13,14 @@
 #' @return A value of Likelihood ratio based on preliminary investigation data. In this case, birth date.
 #' @examples
 #' library(DirichletReg)
-#' LRprelim(ABD = "1976-05-31", DBD = "1976-07-15", 
+#' LRdate(ABD = "1976-05-31", DBD = "1976-07-15", 
 #'	PrelimData, alpha = c(1, 4, 60, 11, 6, 4, 4), 
 #'	cuts = c(-120, -30, 30, 120, 240, 360), 
 #'	type = 1, seed = 123)
 
 
 
-LRprelim = function(ABD = "1976-05-31", DBD = "1976-07-15", PrelimData, alpha = c(1, 4, 60, 11, 6, 4, 4), cuts = c(-120, -30, 30, 120, 240, 360), draw = 500, type = 1, seed = 123) {
+LRdate = function(ABD = "1976-05-31", DBD = "1976-07-15", PrelimData, alpha = c(1, 4, 60, 11, 6, 4, 4), cuts = c(-120, -30, 30, 120, 240, 360), draw = 500, type = 1, seed = 123) {
 seed = seed
 x = DirichletReg::rdirichlet(draw, alpha)
 temp <- dim(x); n <- temp[1]; m <- temp[2]
