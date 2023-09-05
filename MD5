@@ -1,4 +1,4 @@
-7edbe6c09107c470957202149d187522 *DESCRIPTION
+b49bb9749c9c3be86cc74e9d22713b37 *DESCRIPTION
 2b320a454037ba8ade9cbff3d647a219 *NAMESPACE
 a7149878dedff94392c6ae0c24c1df94 *R/Argentina.R
 f98133266520614ded4e93d248926e4c *R/Asia.R
@@ -8,7 +8,7 @@ f98133266520614ded4e93d248926e4c *R/Asia.R
 26350511d5504d4bfc13bf1f51fd2405 *R/CPT_POP.R
 4e9500ec39eaf5fd9167217089fb7202 *R/China.R
 0c0552b00f8b1e639059e264a5d2103e *R/Cmodel.R
-904703975bbcb82b55e75ba2e94e65c7 *R/CondPlot.R
+d62217bd1ae7e5be70100f923e2f2698 *R/CondPlot.R
 2656a6f8040de4370d0dd99ad26df4f5 *R/DeT.R
 e04c8e71eccf7bc0ac7160d98d62cad0 *R/Europe.R
 b2d6b8b591b4d2cd94becd938ecd59ca *R/Japan.R
@@ -26,12 +26,12 @@ e68400bf8b646520db6014f8a53c9d97 *R/makeMPprelim.R
 1d4c4c672343d3ea051ff1af2008ca26 *R/makePOIgen.R
 fc72a01e29715b0d3fefab40e3c69317 *R/makePOIprelim.R
 1f830a0cc8b29780e5d4168a9887726c *R/mispiApp.R
-6c3d701b541c312ad26b04113b73e572 *R/mispitools.R
+05328dbeae1922244e7b0e0f3afbf190 *R/mispitools.R
 ae7e81e263de42c45de0e0193caa37fb *R/postSim.R
-22257156159806c4dc94c6819a1507d1 *R/simLRgen.R
+3c98f58e64214646fe96646a8afb25a6 *R/simLRgen.R
 0cece2b9c674b2faed85406828e32cbc *R/simLRprelim.R
-6f8ab4fc2c6d7c695150f6de12b842ae *README.md
-1a2a754d8212f2d9688e7d09feee78cb *build/partial.rdb
+2738fbbdacc3e284770be9e7b4bac80f *README.md
+87b43308caf9ea9c943e6d00ec59fc2f *build/partial.rdb
 39e5afd6b54e4ba1f193914b8b403f0e *data/Argentina.rda
 282eba58f0d9148f990e592893f00e05 *data/Asia.rda
 ac24ed10d588fd8296415e4e79382016 *data/Austria.rda
@@ -66,7 +66,7 @@ f616513f1caf7d37ad149833236740fc *man/makeMPprelim.Rd
 ea38a804e7fb69bf2b6ee5f6e78030cd *man/makePOIgen.Rd
 860b4cc71aea91acde869d5ce41fc972 *man/makePOIprelim.Rd
 777b0e32a2b410e6116865cb00ac79be *man/mispiApp.Rd
-43431072912a728b0780415b9a44ce6b *man/mispitools.Rd
+61d414e5e33895a3ecd5b3d8306e53df *man/mispitools-package.Rd
 778dfbedacece04b58371968ab7cf1fc *man/postSim.Rd
-33d441d7fbf8b888d871f1921ff4d4da *man/simLRgen.Rd
+e3ea1739a93be9c6ab25a87dcc93adfa *man/simLRgen.Rd
 02f76058cc594814fa71523a337557f9 *man/simLRprelim.Rd
