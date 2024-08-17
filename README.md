@@ -227,15 +227,7 @@ Likelihoold ratio distributions under both hypothesis, relatedness and
 unrelatedness could be plotted.
 
 ``` r
-LRdist(datasim, type = 2)
-```
-<img src="README_files/figure-markdown_github/newplot.png" width="450" height="360">
-
-
-Or other plotting option:
-
-``` r
-LRdist(datasim, type = 1)
+LRdist(datasim)
 ```
 <img src="README_files/figure-markdown_github/New3.png" width="500" height="250">
 
@@ -277,7 +269,7 @@ Postdata <- postSim(
   erRa = 0.01, MPa = 10, MPr = 2
 )
 
-LRdist(Postdata, type = 2)
+LRdist(Postdata)
 ```
 
 <img src="README_files/figure-markdown_github/PostPlot.png" width="450" height="450">

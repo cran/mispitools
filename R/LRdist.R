@@ -2,7 +2,6 @@
 #' Likelihood ratio distribution: a function for plotting expected log10(LR) distributions under relatedness and unrelatedness.
 #'
 #' @param datasim Input dataframe containing expected LRs for related and unrelated POIs. It should be the output from makeLRsims function.
-#' @param type Select between a density plot (type = 1, default) or a violin plot (type = 2).
 #'
 #' @export
 #' @return A plot showing likelihood ratio distributions under relatedness and unrelatedness hypothesis.
@@ -13,76 +12,36 @@
 #' x = profileSim(x, N = 1, ids = 2)
 #' datasim = simLRgen(x, missing = 5, 10, 123)
 #' LRdist(datasim)
-#' @importFrom plotly plot_ly layout
 #' @import dplyr
-#' @import highcharter
 #' @import tidyr
+#' @import ggplot2
 
 
-LRdist = function(datasim, type = 1) {
+LRdist = function(datasim) {
+if (!is.data.frame(datasim)) {
+   datasim <- simLR2dataframe(datasim)
+ }
 
-unrelated_values <- vector()
-related_values <- vector()
-
-list_length <- length(datasim[["Unrelated"]])
-
-for (i in 1:list_length) {
-  unrelated_value <- datasim[["Unrelated"]][[i]][["LRtotal"]][["H1:H2"]]
-  related_value <- datasim[["Related"]][[i]][["LRtotal"]][["H1:H2"]]
-  
-  unrelated_values <- c(unrelated_values, unrelated_value)
-  related_values <- c(related_values, related_value)
-}
-
-results_df <- data.frame(Unrelated = unrelated_values, Related = related_values)
-datasim <- results_df
-
+x <- y <- z <- NULL
 
 TPED = log10(datasim$Related)
 RPED = log10(datasim$Unrelated)
 
-if(type == 1) {
-	hc <- hchart(
-  	stats::density(TPED), type = "area", 
-  	color = "steelblue", name = "Related"
-  	) %>%
-  	hc_add_series(
-    	stats::density(RPED), type = "area",
-    	color = "#B71C1C", 
-    	name = "Unrelated"
-    	) %>%
-    	hc_title(text = "LR distributions") %>%
-    	hc_xAxis(title = list(text = "Log10(LR)")) %>%
-    	hc_yAxis(title = list(text = "Density"))
-	}
-else if(type == 2) {
-	datalog <- log10(datasim)
-	datalog <- tidyr::gather(datalog)
-	colnames(datalog) <- c("tipo", "LR")
-	hc <- datalog %>%
-	  plot_ly(
-    	  	x = ~tipo,
-    		y = ~LR,
-    		type = 'violin',
-    		box = list(
-      		visible = T
-    		),
-    	        split = ~tipo,
-    		meanline = list(
-      		visible = T
-   	 		)
-  			 )
+# Calculamos las densidades
+density_TPED <- stats::density(TPED)
+density_RPED <- stats::density(RPED)
 
-       hc <- hc %>%
-  	plotly::layout(
-    	xaxis = list(
-      	title = "hypothesis"
-    	),
-    	yaxis = list(
-      	title = "Log10(LR)",
-      	zeroline = F
-    	       )
-  		)
-       }
-hc
+# Convertimos las densidades en data frames para ggplot2
+df_TPED <- data.frame(x = density_TPED$x, y = density_TPED$y)
+df_RPED <- data.frame(x = density_RPED$x, y = density_RPED$y)
+
+# Creamos el plot
+ggplot2::ggplot() +
+  ggplot2::geom_area(data = df_TPED, ggplot2::aes(x = x, y = y), fill = "steelblue", alpha = 0.6, color = NA) +
+  ggplot2::geom_area(data = df_RPED, ggplot2::aes(x = x, y = y), fill = "#B71C1C", alpha = 0.6, color = NA) +
+  ggplot2::labs(title = "LR distributions",
+                x = "Log10(LR)",
+                y = "Density") +
+  ggplot2::theme_minimal()
+
 }
