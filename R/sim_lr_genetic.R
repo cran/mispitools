@@ -61,7 +61,7 @@
 #' identification." \emph{Forensic Science International: Genetics}, 52, 102465.
 #'
 #' @export
-#' @import forrel
+#' @import pedtools
 #'
 #' @examples
 #' library(forrel)
